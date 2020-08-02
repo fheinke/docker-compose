@@ -4,11 +4,10 @@ services:
     influxdb:
         image: influxdb:1.8
         container_name: influxdb
-        restart: always
+        restart: unless-stopped
         ports: 
-            - 8086:8086
-        networks: 
-            - influxdb-net
+            - "8086:8086"
+        network_mode: "bridge"
         volumes: 
             - influxdb-data:/var/lib/influxdb
         environment:
@@ -22,6 +21,3 @@ services:
 
 volumes: 
     influxdb-data:
-    
-networks: 
-    influxdb-net:
