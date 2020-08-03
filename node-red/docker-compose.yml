@@ -9,13 +9,13 @@ services:
             - TZ=Europe/Berlin
         ports: 
             - 1880:1880
-        networks: 
-            - node-red-net
         volumes: 
             - node-red-data:/data
 
 volumes: 
     node-red-data:
 
-networks: 
-    node-red-net:
+networks:
+    default:
+        external: 
+            name: node-red-net
