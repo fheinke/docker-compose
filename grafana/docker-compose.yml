@@ -12,6 +12,8 @@ services:
             - ${PWD}/import_dashboard.yml:/etc/grafana/provisioning/dashboards/import_dashboard.yml:ro
             - ${PWD}/dashboards:/var/lib/grafana/dashboards:ro
             - ${PWD}/datasources:/etc/grafana/provisioning/datasources:ro
+        env_file: 
+            - .env
 
 volumes: 
     grafana-data:
