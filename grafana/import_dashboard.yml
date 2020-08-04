@@ -1,0 +1,14 @@
+apiVersion: 1
+
+providers:
+  - name: 'FHeinke'
+    orgId: 1
+    folder: 'FHeinke Server Monitoring'         # Folder behind Dashboards
+    folderUid: ''
+    type: file
+    disableDeletion: false                      # Disable Folder Deletion
+    editable: true                              # Enable Dashboard changes
+    updateIntervalSeconds: 30
+    allowUiUpdates: false                       # Allow Updates from the UI
+    options:
+        path: /var/lib/grafana/dashboards
