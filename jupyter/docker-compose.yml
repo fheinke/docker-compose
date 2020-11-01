@@ -2,13 +2,14 @@ version: '3.8'
 
 services: 
     jupiter:
-        image: jupyter/tensorflow-notebook
+        build: .
         container_name: jupyter
         restart: unless-stopped
         ports: 
             - 8888:8888
         environment: 
             - JUPYTER_ENABLE_LAB=yes
+            #- GRANT_SUDO=yes
         volumes: 
             - jupyter:/home/jovyan/work
 
