@@ -11,7 +11,7 @@ services:
             - JUPYTER_ENABLE_LAB=yes
             #- GRANT_SUDO=yes
         volumes: 
-            - jupyter:/home/jovyan/work
+            - jupyter:/home/jovyan
 
 volumes: 
     jupyter:
